@@ -27,9 +27,10 @@ public class NavMeshController : MonoBehaviour
     {
         agent.SetDestination(target[targetIndex].position);
 
-        if (agent.remainingDistance < agent.stoppingDistance)
+        if (agent.remainingDistance < agent.stoppingDistance && target.Length > 1)
         {
-            targetIndex = (targetIndex++) % target.Length;
+            targetIndex = ++targetIndex % target.Length;
+            Debug.Log(targetIndex);
         }
 
 

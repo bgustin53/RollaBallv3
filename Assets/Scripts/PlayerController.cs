@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         speed = 60;
         count = 0;
         SetCountText();
-        winTextObject.SetActive(false);
+        //winTextObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,10 +46,10 @@ public class PlayerController : MonoBehaviour
 
     private void SetCountText()
     {
-        countText.text = "Count " + count.ToString();
+        //countText.text = "Count " + count.ToString();
         if(count >= 12)
         {
-            winTextObject.SetActive(true);
+            //winTextObject.SetActive(true);
         }
     }
 
